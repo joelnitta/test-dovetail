@@ -1,52 +1,44 @@
 ---
-title: 'introduction'
+title: イントロダクション
 teaching: 10
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using R Markdown and `{sandpaper}`?
+- `{sandpaper}`とR Markdownを使ったレッスンはどのように書くことができますか？
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with the new lesson template
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- 新しいレッスンテンプレートでマークダウンを使用する方法を説明しましょう
+- コード、図、ネストされた課題ブロックの使い方を説明しましょう
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## はじめに
 
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown][pandoc] for static files (with extension `.md`) and
-[R Markdown][r-markdown] for dynamic files that can render code into output
-(with extension `.Rmd`). Please refer to the [Introduction to The Carpentries
-Workbench][carpentries-workbench] for full documentation.
+これはThe Carpentries Workbenchによって作成されたレッスンです。内容の変わらないファイル（`.md`拡張を持つファイル）は[Pandoc風Markdown][pandoc]によって書かれて、コードによって内容が出力されるファイル（`.Rmd`拡張を持つファイル）は[R Markdown][r-markdown]によって書かれています。
+完全な説明を読みたい場合は[Introduction to The Carpentries Workbench][carpentries-workbench]を参照してください。
 
-What you need to know is that there are three sections required for a valid
-Carpentries lesson template:
+The Carpentries Workbenchによるレッスン作成には以下の3つのセクションが必要です：
 
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
+1. `questions`は、エピソードの冒頭に参加者がこれから学ぶ内容について表示されます。
+2. `objectives`は、上記の質問と一緒に表示されるエピソードの学習目標です。
+3. `keypoints`は、エピソードの最後に学習目標を強調するために表示されます。
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
+インラインのインストラクターノートは、インストラクターに課題のタイミングを知らせるのに役立ちます。
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: challenge 
+::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: Can you do it?
+## チャレンジ1：できますか？
 
-What is the output of this command?
+このコマンドの出力は？
 
 ```r
 paste("This", "new", "lesson", "looks", "good")
@@ -54,48 +46,46 @@ paste("This", "new", "lesson", "looks", "good")
 
 :::::::::::::::::::::::: solution 
 
-## Output
- 
+## 出力
+
 ```output
 [1] "This new lesson looks good"
 ```
 
 :::::::::::::::::::::::::::::::::
 
-
-## Challenge 2: how do you nest solutions within challenge blocks?
+## 課題2：課題ブロックの中に解決策を入れ子にする方法は？
 
 :::::::::::::::::::::::: solution 
 
-You can add a line with at least three colons and a `solution` tag.
+少なくとも3つのコロンと `solution` タグを追加します。
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Figures
+## 図表
 
-You can use pandoc markdown for static figures with the following syntax:
+以下の構文で、静的な図にpandocマークダウンを使うことができます：
 
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
+`![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}`
 
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
+![The Carpentriesはどなたでも大歓迎です](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
 
-## Math
+## 数学
 
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
+$\LaTeX$方程式を使うことができます：
 
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
+`$\alpha = \dfrac{1}{(1 - \beta)^2}$` はこのようになります： $\alpha = \dfrac{1}{(1 - \beta)^2}$
 
-Cool, right?
+悪くないでしょ？
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+- 内容が変わらないエピソードには `.md` ファイルを使用します。
+- コードによって内容を計算する場合は `.Rmd` ファイルを使用します。
+- `sandpaper::check_lesson()` を実行することによってでレッスンの問題を特定します。
+- `sandpaper::build_lesson()` を実行することによってレッスンをローカルでプレビューできます。
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
 
